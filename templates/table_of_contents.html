@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block icerik %}
+{% for l in lessons %}
+	{{ l.title }}<br />
+	{% for x in l.get_category_lessons %}
+	> <a href="{{ x.get_absolute_url }}">{{ x.title }}</a> <br />
+	{% endfor %}
+{% endfor %}
+{% endblock %}

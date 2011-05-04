@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block icerik %}
+	{% load markup %}
+	<div id="title">
+	{{ lesson.title }}
+	<br />
+	{{ lesson.content_html|markdown }}
+	</div>
+{% endblock %}
